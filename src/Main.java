@@ -30,19 +30,43 @@ public class Main
 
 		// Creates a string variable, that gets its data from the pizzaToppings method. Output in numbers in a string.
 		String toppings = pizzaToppings();
+
 		// Loops through the string, and checks which toppings the customer has chosen. The loop has checked the code for duplicates
 		for (int i = 0; i < toppings.length(); i++)
 		{
 			int currentNum = Character.getNumericValue(toppings.charAt(i));
-			switch (currentNum)
+			if (currentNum == 1 && !toppingBacon)
 			{
-				case 1: toppingBacon = true; classVarToppingPrice += 10; break;
-				case 2: toppingDressing = true; break;
-				case 3: toppingPepperoni = true; classVarToppingPrice += 10; break;
-				case 4: toppingAnanas = true; classVarToppingPrice += 5; break;
-				case 5: toppingJalapenos = true; classVarToppingPrice += 5; break;
-				case 6: toppingHvidlog = true; classVarToppingPrice += 5; break;
-				case 7: toppingChili = true; break;
+				toppingBacon = true;
+				classVarToppingPrice += 10;
+			}
+			else if (currentNum == 2 && !toppingDressing)
+			{
+				toppingDressing = true;
+			}
+			else if (currentNum == 3 && !toppingPepperoni)
+			{
+				toppingPepperoni = true;
+				classVarToppingPrice += 10;
+			}
+			else if (currentNum == 4 && !toppingAnanas)
+			{
+				toppingAnanas = true;
+				classVarToppingPrice += 5;
+			}
+			else if (currentNum == 5 && !toppingJalapenos)
+			{
+				toppingJalapenos = true;
+				classVarToppingPrice += 5;
+			}
+			else if (currentNum == 6 && !toppingHvidlog)
+			{
+				toppingHvidlog = true;
+				classVarToppingPrice += 5;
+			}
+			else if (currentNum == 7 && !toppingChili)
+			{
+				toppingChili = true;
 			}
 		}
 
@@ -153,18 +177,6 @@ public class Main
 		// Calls scanner, because we want the user to input the toppings they want
 		Scanner input = new Scanner(System.in);
 
-		// We create a string, which we are going to return
-		String intToppings = "";
-
-		// We create bools of the toppings, since we want it to only take one topping
-		boolean toppingBacon = false;
-		boolean toppingDressing = false;
-		boolean toppingPepperoni = false;
-		boolean toppingAnanas = false;
-		boolean toppingJalapenos = false;
-		boolean toppingHvidlog = false;
-		boolean toppingChili = false;
-
 		// Prints out the different toppings and their prices
 		System.out.printf(COLOUR_RED + "%nToppings" + COLOUR_RESET);
 		System.out.printf("%n1. " + COLOUR_WHITE_BOLD + "Bacon " + COLOUR_RESET + "%14s", "- 10 DKK");
@@ -176,49 +188,7 @@ public class Main
 		System.out.printf("%n7. " + COLOUR_WHITE_BOLD + "Chili " + COLOUR_RESET + "%13s", "- 0 DKK");
 		System.out.printf("%n%nPlease choose the toppings you want %n(fx. 15 for Bacon and Jalapeños & 0 for nothing): ");
 
-		// We create a loop to check each of the toppings and if it has been used before, it will skip
-		String strToppings = inputNumberStrToppings(input.next());
-		for (int i = 0; i < strToppings.length(); i++)
-		{
-			int currentNum = Character.getNumericValue(strToppings.charAt(i));
-			if (currentNum == 1 && !toppingBacon)
-			{
-				toppingBacon = !toppingBacon;
-				intToppings += "1";
-			}
-			else if (currentNum == 2 && !toppingDressing)
-			{
-				toppingDressing = !toppingDressing;
-				intToppings += "2";
-			}
-			else if (currentNum == 3 && !toppingPepperoni)
-			{
-				toppingPepperoni = !toppingPepperoni;
-				intToppings += "3";
-			}
-			else if (currentNum == 4 && !toppingAnanas)
-			{
-				toppingAnanas = !toppingAnanas;
-				intToppings += "4";
-			}
-			else if (currentNum == 5 && !toppingJalapenos)
-			{
-				toppingJalapenos = !toppingJalapenos;
-				intToppings += "5";
-			}
-			else if (currentNum == 6 && !toppingHvidlog)
-			{
-				toppingHvidlog = !toppingHvidlog;
-				intToppings += "6";
-			}
-			else if (currentNum == 7 && !toppingChili)
-			{
-				toppingChili = !toppingChili;
-				intToppings += "7";
-			}
-		}
-		// We return the single digit toppings
-		return intToppings;
+		return inputNumberStrToppings(input.next());
 	}
 
 
