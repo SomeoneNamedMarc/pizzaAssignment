@@ -204,6 +204,9 @@ public class Main
 			return false;
 		}
 	}
+
+	// Checks the input string and checks if it is an int, and if its within the values
+	// If not, it will loop and prompt the user to reenter a number
 	public static int inputNumberIntPizza(String str)
 	{
 		Scanner input = new Scanner(System.in);
@@ -214,6 +217,9 @@ public class Main
 		}
 		return Integer.parseInt(str);
 	}
+
+	// Checks the input string and checks if it is an int
+	// If not, it will loop and prompt the user to reenter a number
 	public static String inputNumberStrToppings(String str)
 	{
 		Scanner input = new Scanner(System.in);
@@ -224,6 +230,9 @@ public class Main
 		}
 		return str;
 	}
+
+	// Checks the input string and checks if it is an int, and if its within the values
+	// If not, it will loop and prompt the user to reenter a number
 	public static int inputNumberIntSize(String str)
 	{
 		Scanner input = new Scanner(System.in);
