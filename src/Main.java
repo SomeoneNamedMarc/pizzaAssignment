@@ -1,4 +1,6 @@
 // This program can also be found at https://github.com/SomeoneNamedMarc/pizzaAssignment
+// This program has been tested by Jakub Hason.
+
 import java.util.Scanner;
 
 public class Main
