@@ -1,4 +1,6 @@
+// This program can also be found at https://github.com/SomeoneNamedMarc/pizzaAssignment
 import java.util.Scanner;
+
 public class Main
 {
 	// Defining colour-codes
@@ -75,7 +77,7 @@ public class Main
 		double priceFactor = 0;
 		switch (pizzaSize())
 		{
-			case 1: priceFactor = 0.75; pizzaSizeName = "Childrens Size"; break;
+			case 1: priceFactor = 0.75; pizzaSizeName = "Children's Size"; break;
 			case 2: priceFactor = 1; pizzaSizeName = "Standard Size"; break;
 			case 3: priceFactor = 1.5; pizzaSizeName = "Large Size"; break;
 		}
@@ -121,8 +123,8 @@ public class Main
 		Scanner input = new Scanner(System.in);
 
 		// Prints out the menu
-		System.out.printf(COLOUR_RED + "Pizza Menu%n" + COLOUR_RESET);
-		System.out.printf("1. " + COLOUR_WHITE_BOLD + "Margherita " + COLOUR_RESET + "%33s", "- 60 DKK | tomat, ost & oregano");
+		System.out.printf(COLOUR_RED + "Pizza Menu" + COLOUR_RESET);
+		System.out.printf("%n1. " + COLOUR_WHITE_BOLD + "Margherita " + COLOUR_RESET + "%33s", "- 60 DKK | tomat, ost & oregano");
 		System.out.printf("%n2. " + COLOUR_WHITE_BOLD + "Prima " + COLOUR_RESET + "%68s", "- 70 DKK | tomat, ost, kalkunskinke, pepperoni, løg & oregano");
 		System.out.printf("%n3. " + COLOUR_WHITE_BOLD + "Hawaii " + COLOUR_RESET + "%59s", "- 60 DKK | tomat, ost, kalkunskinke, ananas & oregano");
 		System.out.printf("%n4. " + COLOUR_WHITE_BOLD + "Pepperoni " + COLOUR_RESET + "%52s", "- 60 DKK | tomat, ost, pepperoni, chili & oregano");
@@ -137,7 +139,7 @@ public class Main
 		// Depending on the chosen pizza, the switch statement will change the pizzas base price and the pizza name
 		switch(inputNumberIntPizza(input.next()))
 		{
-			case 1: classVarPizzaPrice = 60; classVarPizzaName = "Margherita";	break;
+			case 1: classVarPizzaPrice = 60; classVarPizzaName = "Margherita";  break;
 			case 2: classVarPizzaPrice = 70; classVarPizzaName = "Prima";		break;
 			case 3: classVarPizzaPrice = 60; classVarPizzaName = "Hawaii";		break;
 			case 4: classVarPizzaPrice = 60; classVarPizzaName = "Pepperoni"; 	break;
